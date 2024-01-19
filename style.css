@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #dfe6e9;
+}
+header{
+display: flex;
+justify-content: space-around;
+padding: 10px 0;
+align-items: center;
+text-align: center;
+position: fixed;
+width: 100%;
+z-index: 1000;
+}
+header::before{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+header::after{
+    content: '';
+    top: 0;
+    left: -100%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4),transparent);
+    transition: all 0.5s ease;
+}
+header:hover::after{
+    left: 100%;
+}
+header.sticky{
+    padding: 0 15%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: padding 0.6s ease;
+}
+.logo{
+    width: 75px;
+}
+.logo >img{
+    width: 100%;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+.logo img:hover{
+    scale: .9;
+}
+.sosh{
+    color: #dfe6e9;
+    background-color: #453e3b;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+.sosh:hover{
+    scale: .9;
+    color: #453e3b;
+    background-color: #dfe6e9;
+    border: 1px solid #453e3b;
+}
+.icon{
+    position: fixed;
+    top:0;
+    left:100%;
+    width: 100%;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 1000;
+}
+.icon.kaka{
+    left: calc(100% - 100%);
+}
+.ic{
+    font-size: 6rem;
+    line-height:100vh;
+    height: 100vh;
+}
+.clo{
+    color: #dfe6e9;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.clo:hover{
+    color: red;
+}
+
+.navbar a{
+    color: #453e3b;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 10px;
+    font-weight: bold;
+    font-family: "Asiatech";
+    transition: all 0.6s ease;
+    border-radius: 6px;
+}
+.navbar a:hover{
+    color: #dfe6e9;
+    background-color: #453e3b;
+}
+#menu{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    color: #453e3b;
+    height: 30px;
+    display: none;
+}
+#menu:hover{
+    color: #dfe6e9;
+    background-color: #453e3b;
+    scale: .9;
+}
+.closed{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    color: #453e3b;
+    height: 30px;
+    display: none;
+}
+.closed:hover{
+    color: #dfe6e9;
+    background-color: #453e3b;
+    scale: .9;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./image/neymar.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.text{
+    position: absolute;
+    font-size: 3rem;
+    left: 2%;
+    top: 40%;
+    color: #dfe6e9;
+    line-height:50px;
+    font-weight: bold;
+}
+.text h1{
+    font-size: 160px;
+    line-height: 160px;
+    color: transparent;
+    -webkit-text-stroke: 1px #dfe6e9;
+    background-image:url(./image/back.png);
+    background-position: 0 0 ;
+    -webkit-background-clip: text;
+    animation:  back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.master{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    gap: 2rem;
+    line-height: 350px;
+    margin-top: 2rem;
+}
+.box{
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    font-family: "Asiatech";
+    font-size: 4rem;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #453e3b;
+    transition: all 0.6s ease;
+}
+.box:hover{
+    scale: .9;
+    border: 2px solid #453e3b;
+}
+.fullframe{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 100%;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 1000;
+}
+.active .fullframe{
+    left: calc(100% - 100%);
+}
+.fullframe iframe{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+}
+.closes{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    color: #dfe6e9;
+}
+.closes:hover{
+    color: red;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+.gallery img{
+    width: 350px;
+    border-radius: 20px;
+    height: 250px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+.gallery img:hover{
+    scale: .9;
+}
+.image-popup-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    transition: all 0.9s ease;
+    animation: popup 1s;
+    z-index: 10000;
+}
+@keyframes popup{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.closebutton{
+    position: absolute;
+    top: 5px;
+    right:5px;
+    font-size: 60px;
+    color: #fff;
+    cursor: pointer;
+}
+.closebutton:hover{
+    color: red;
+}
+#popupImage{
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+}
+
+@media (max-width:900px){
+    .navbar a{
+        font-size: 1rem;
+    }
+    .sosh{
+        font-size: .8rem;
+    }
+    .text h1{
+        font-size: 120px;
+    }
+    .text p,
+    .text h3{
+        font-size: 2rem;
+    }
+}
+@media (max-width:700px){
+    #menu{
+        display: block;
+    }
+    .navbar{
+       position: absolute;
+       top: 100%;
+       width: 100%;
+       height: 0;
+       background-color: rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(50px);
+       overflow: hidden;
+       transition: all 0.5s ease;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        color: #dfe6e9;
+    }
+    .navbar.open{
+        height: 16.6rem;
+    }
+    .navbar.open a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+    .text h1{
+        font-size: 100px;
+    }
+    .text p,
+    .text h3{
+        font-size: 1.2rem;
+    }
+    .box{
+        width: 90%;
+    }
+    .ic{
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        line-height:20vh;
+    }
+}
+@media (max-width:500px){
+    .text h1{
+        font-size: 80px;
+    }
+    .text p,
+    .text h3{
+        font-size: 0.8rem;
+    }
+    
+}

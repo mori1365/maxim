@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAXIM</title>
+    <link rel="icon" href="./image/logo.png">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./font.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="./image/logo.png" alt=""></div>
+        <div class="soshal">
+            <div class="sosh">شبکه اجتماعی</div>
+            <div class="icon">
+                <div class="clo">&#10006;</div>
+               <div class="ic">
+                <a href=""><i class='bx bxl-telegram' style="color:rgb(70, 70, 238) ;"></i></a>
+                <a href=""><i class='bx bxl-instagram' style="color:rgb(201, 76, 97) ;" ></i></a>
+                <a href=""><i class='bx bxl-whatsapp' style="color:rgb(24, 177, 24) ;" ></i></a>
+                <a href=""><i class='bx bxl-facebook' style="color:blue ;" ></i></a>
+                <a href=""><i class='bx bxl-youtube' style="color:red ;" ></i></a>
+               </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="#"style="--i:0">خانه</a>
+            <a href="#"style="--i:1">بنرسایت</a>
+            <a href="#"style="--i:2">مسترلیگ</a>
+            <a href="#"style="--i:3">مدیاسنتر</a>
+            <a href="#"style="--i:4">درباره ما</a>
+        </div>
+        <div id="menu">&#9776;</div>
+        <div class="closed">&#10006;</div>
+    </header>
+    <div class="banner" id="banner">
+        <div class="text">
+            <p>Im, Developer</p>
+            <h1>MAXIM</h1>
+            <h3 class="tt"></h3>
+        </div>
+    </div>
+    <div class="master" id="master">
+        <div class="box" onclick="fullscreen('league.html')">جدول لالیگا</div>
+        <div class="box" onclick="fullscreen('')">2</div>
+        <div class="box" onclick="fullscreen('')">3</div>
+        <div class="box" onclick="fullscreen('')">4</div>
+        <div class="box" onclick="fullscreen('')">5</div>
+        <div class="box" onclick="fullscreen('')">6</i>
+        </div>
+    </div>
+    <div class="fullframe" id="fullframe">
+        <div class="closes" onclick="closebtn()">&#10006;</div>
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+    <div class="gallery" id="gallery">
+        <img onclick="showImage(src)" src="./image/acmilan.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/alvarez.webp" alt="">
+        <img onclick="showImage(src)" src="./image/atletikomadrid.png" alt="">
+        <img onclick="showImage(src)" src="./image/barcelona.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/blingham.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/chelsee.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/cr7.png" alt="">
+        <img onclick="showImage(src)" src="./image/holand.webp" alt="">
+        <img onclick="showImage(src)" src="./image/ibrahimovich.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/intermilan.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/messi.jpeg" alt="">
+        <img onclick="showImage(src)" src="./image/neymar.jpeg" alt="">
+    </div>
+    <div class="image-popup-container" id="imagePopup" onclick="closeImage()">
+        <span class="closebutton" onclick="closeImage()">&#10006;</span>
+        <img src="" alt="popup Image" id="popupImage">
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
